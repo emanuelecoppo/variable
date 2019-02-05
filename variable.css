@@ -8,7 +8,6 @@
 
 /*----------------------------------------FONTS----------------------------------------*/
 
-
 @font-face {
     font-family:'Bahnschrift';
     src: url(./fonts/Bahnschrift.woff2);
@@ -21,25 +20,41 @@
     font-family:'IBMPlexSerif-Italic';
     src: url(./fonts/IBMPlexSerif-Italic.woff2);
 }
-
-/*----------------------------------------TEXT----------------------------------------*/
-
-h1 {
-    text-align: center;
-	font-size: 20vw;
-    letter-spacing: 2vw;
-	font-family: 'Bahnschrift';
-    font-variation-settings: 'wght' 300, 'wdth' 75;
-	animation: Bahnschrift 1s infinite alternate ease-in-out;
+@font-face {
+    font-family:'Cheee';
+    src: url(./fonts/Cheee_Variable.woff2);
 }
-@keyframes Bahnschrift {
-	0% {font-variation-settings: 'wght' 300, 'wdth' 75;}
-	100% {font-variation-settings: 'wght' 700, 'wdth' 75;}
+@font-face {
+    font-family:'Dunbar';
+    src: url(./fonts/Dunbar_Series-VF.woff2);
 }
-p {
-    text-align: center;
-    font-size: 25px;
-    font-family: 'IBMPlexSerif-Regular';
+@font-face {
+    font-family:'Foreday';
+    src: url(./fonts/ForedayGX.woff2);
+}
+@font-face {
+    font-family:'LabDJR';
+    src: url(./fonts/LabDJR-VF.woff2);
+}
+@font-face {
+    font-family:'Buffalo-Gals';
+    src: url(./fonts/BuffaloGals_Var.woff2);
+}
+@font-face {
+    font-family:'Myriad';
+    src: url(./fonts/MyriadVariableConcept-Roman.woff2);
+}
+@font-face {
+    font-family:'Minion';
+    src: url(./fonts/MinionVariableConcept-Roman.woff2);
+}
+@font-face {
+    font-family:'InThePines';
+    src: url(./fonts/InthePinesSolidGX.ttf);
+}
+@font-face {
+    font-family:'Muybridge';
+    src: url(./fonts/MuybridgeGX.woff2);
 }
 
 /*----------------------------------------GENERAL----------------------------------------*/
@@ -47,15 +62,114 @@ p {
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
 }
 body {
     margin: 0;
-    padding: 0;
+    padding: 6vw 0;
     background-color: #fff;
 }
 iframe {
     border: none;
     width: 100%;
-    height: 500px;
+    height: 70vw;
     background-color: #4a4a4a;
+    margin: 10vw 0;
 }
+p {
+    text-align: center;
+    font-size: 1em;
+    font-family: 'IBMPlexSerif-Regular';
+}
+i {
+    font-family: 'IBMPlexSerif-Italic';
+}
+.font {
+    white-space: nowrap;
+    overflow-x: hidden;
+    border: none;
+    outline: none;
+    text-align: center;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#Bahnschrift {
+    letter-spacing: 2vw;
+}
+#polimi {
+    display: block;
+    margin: auto;
+    margin-top: 12vw;
+    margin-bottom: 2vw;
+    width: 300px;
+    max-width: 70vw;
+}
+#pause {
+    position: fixed;
+    right: calc(10px + 2vw);
+    bottom: calc(10px + 1vw);
+    color: #000;
+    font-size: 1.7em;
+    cursor: pointer;
+}
+
+/*----------------------------------------KEYFRAMES----------------------------------------*/
+
+@keyframes Bahnschrift {
+    from,to {font-variation-settings: 'wght' 300, 'wdth' 75;}
+    50% {font-variation-settings: 'wght' 700, 'wdth' 75;}
+}
+@keyframes Cheee {
+    from,to {font-variation-settings: 'yest' 500, 'grvt' 0, 'temp' 0}
+    50% {font-variation-settings: 'yest' 500, 'grvt' 0, 'temp' 1000}
+}
+@keyframes LabDJR {
+    from,to {font-variation-settings: 'BEVL' 0, 'OVAL' 0, 'QUAD' 0, 'SIZE' 0}
+    50% {font-variation-settings: 'BEVL' 0, 'OVAL' 0, 'QUAD' 0, 'SIZE' 1000}
+}
+@keyframes Foreday {
+    from,to {font-variation-settings: 'wght' 80, 'SERI' 1}
+    50% {font-variation-settings: 'wght' 80, 'SERI' 10}
+}
+@keyframes Buffalo-Gals {
+    from,to {font-variation-settings: 'CK  ' 0, 'FR  ' 0, 'HV  ' 0}
+    10% {font-variation-settings: 'CK  '-1, 'FR  ' 0, 'HV  ' 0}
+    20% {font-variation-settings: 'CK  ' 1, 'FR  ' 0, 'HV  ' 0}
+    30% {font-variation-settings: 'CK  ' 0, 'FR  ' 0, 'HV  ' 0}
+    40% {font-variation-settings: 'CK  ' 0, 'FR  '-1, 'HV  ' 0}
+    50% {font-variation-settings: 'CK  ' 0, 'FR  ' 1, 'HV  ' 0}
+    60% {font-variation-settings: 'CK  ' 0, 'FR  ' 0, 'HV  ' 0}
+    70% {font-variation-settings: 'CK  ' 0, 'FR  ' 0, 'HV  ' 0}
+    80% {font-variation-settings: 'CK  ' 0, 'FR  ' 0, 'HV  '-1}
+    90% {font-variation-settings: 'CK  ' 0, 'FR  ' 0, 'HV  ' 1}
+}
+@keyframes Myriad {
+    from,to {font-variation-settings: 'wght' 300, 'wdth' 70}
+    25% {font-variation-settings: 'wght' 300, 'wdth' 110}
+    50% {font-variation-settings: 'wght' 900, 'wdth' 110}
+    75% {font-variation-settings: 'wght' 900, 'wdth' 70}
+}
+@keyframes Minion {
+    from,to {font-variation-settings: 'wght' 400, 'opsz' 36}
+    17% {font-variation-settings: 'wght' 400, 'opsz' 6}
+    34% {font-variation-settings: 'wght' 400, 'opsz' 36}
+    51% {font-variation-settings: 'wght' 700, 'opsz' 36}
+    68% {font-variation-settings: 'wght' 700, 'opsz' 6}
+    85% {font-variation-settings: 'wght' 700, 'opsz' 36}
+}
+@keyframes InThePines {
+    from,to {font-variation-settings: 'trnk' 300, 'brch' 0, 'cstm' 0}
+    50% {font-variation-settings: 'trnk' 300, 'brch' 500, 'cstm' 0}
+}
+@keyframes Dunbar {
+    from,to {font-variation-settings: 'wght' 100, 'XHGT' 353}
+    25% {font-variation-settings: 'wght' 100, 'XHGT' 574}
+    50% {font-variation-settings: 'wght' 900, 'XHGT' 574}
+    75% {font-variation-settings: 'wght' 900, 'XHGT' 353}
+}
+@keyframes Muybridge {
+    from {font-variation-settings: 'TIME' 0}
+    to {font-variation-settings: 'TIME' 1000}
+}
+.running {animation-play-state: running}
+.paused {animation-play-state: paused}
